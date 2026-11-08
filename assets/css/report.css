@@ -1,0 +1,101 @@
+/* ================================================================
+   T26 Platform · v3.2 — Compiled Assurance Report
+   ================================================================ */
+
+.rp-toolbar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.rp-generated { margin-left: auto; font-size: 10.5px; color: var(--faint); font-family: var(--font-mono); }
+.rp-stage { background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 22px; }
+
+.rp-paper {
+  max-width: 1000px; margin: 0 auto; background: #fff; color: #0e1d30;
+  padding: 48px 54px; border-radius: 6px; box-shadow: 0 14px 44px rgba(16, 38, 66, .13);
+  font-size: 12px; line-height: 1.65;
+}
+html[data-theme="dark"] .rp-paper { background: #fbfcfe; color: #0e1d30; }
+.rp-paper h1, .rp-paper h3 { color: #0e1d30; }
+.rp-paper svg.icon { width: 14px; height: 14px; }
+
+.rp-cover { border-bottom: 3px solid #1c63b7; padding-bottom: 24px; margin-bottom: 32px; }
+.rp-cover-top { display: flex; justify-content: space-between; gap: 14px; font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; color: #637890; font-weight: 700; }
+.rp-mono { font-family: var(--font-mono); font-size: 10px; }
+.rp-kicker { display: block; font-size: 9.5px; letter-spacing: .17em; color: #1c63b7; font-weight: 800; margin: 32px 0 10px; }
+.rp-cover-title h1 { font-size: 28px; margin: 0 0 8px; line-height: 1.28; }
+.rp-cover-title p { color: #5b7089; font-size: 13px; margin: 0; }
+.rp-cover-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 26px 0 16px; }
+.rp-cover-grid > div { background: #f5f8fc; border: 1px solid #dde6ef; border-radius: 8px; padding: 10px 13px; }
+.rp-cover-grid span { display: block; font-size: 9.5px; color: #637890; text-transform: uppercase; letter-spacing: .05em; }
+.rp-cover-grid strong { display: block; font-size: 11.5px; margin-top: 3px; }
+.rp-cover-note { display: flex; gap: 9px; align-items: flex-start; background: #fff8e8; border: 1px solid #ecd9a8; border-radius: 8px; padding: 10px 13px; font-size: 10.5px; color: #7a5c14; line-height: 1.55; }
+.rp-cover-note .icon { color: #b07618; flex: none; margin-top: 1px; }
+
+.rp-section { margin: 0 0 32px; break-inside: avoid; }
+.rp-section-head { display: flex; gap: 12px; align-items: flex-start; border-bottom: 1px solid #dde6ef; padding-bottom: 10px; margin-bottom: 15px; }
+.rp-sec-no { font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #fff; background: #1c63b7; border-radius: 6px; padding: 5px 8px; flex: none; }
+.rp-section-head h3 { font-size: 16px; margin: 0; }
+.rp-section-head small { color: #637890; font-size: 9.5px; }
+.rp-section > p { font-size: 11.5px; color: #31465e; margin: 0 0 10px; line-height: 1.75; }
+.rp-muted { color: #637890 !important; font-size: 10.5px !important; }
+.rp-callout { background: #f5f8fc; border-left: 3px solid #1c63b7; padding: 14px 17px; margin: 13px 0; border-radius: 0 8px 8px 0; }
+.rp-callout strong { font-size: 11.5px; }
+.rp-callout ol { margin: 8px 0 0; padding-left: 19px; }
+.rp-callout li { font-size: 11px; margin: 5px 0; }
+
+.rp-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 13px; }
+.rp-kpis > div { border: 1px solid #dde6ef; border-radius: 8px; padding: 12px; background: #f5f8fc; }
+.rp-kpis span { display: block; font-size: 9.5px; color: #637890; }
+.rp-kpis strong { display: block; font-family: var(--font-head); font-size: 23px; font-weight: 800; line-height: 1.2; margin: 3px 0; letter-spacing: -.03em; }
+.rp-kpis small { font-size: 9.5px; color: #637890; }
+
+.rp-table-wrap { overflow-x: auto; max-width: 100%; }
+.rp-table { width: 100%; border-collapse: collapse; font-size: 10.5px; margin: 12px 0; }
+.rp-table th { background: #f5f8fc; text-align: left; font-size: 9px; letter-spacing: .05em; text-transform: uppercase; color: #637890; padding: 8px 9px; border-bottom: 1px solid #dde6ef; white-space: nowrap; }
+.rp-table td { padding: 8px 9px; border-bottom: 1px solid #e6edf5; vertical-align: top; }
+.rp-table td small { display: block; color: #637890; font-size: 9px; margin-top: 2px; line-height: 1.45; }
+.rp-table td strong { font-weight: 650; }
+.rp-num { text-align: center; font-family: var(--font-mono); }
+.rp-pill { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 9px; font-weight: 700; white-space: nowrap; }
+.rp-pill.ok { background: #e1f4ec; color: #12805f; }
+.rp-pill.warn { background: #fdf3df; color: #a9741a; }
+.rp-pill.bad { background: #fbe9e7; color: #bb3b36; }
+.rp-pill.neutral { background: #eef2f7; color: #5b7089; }
+.rp-principles { padding-left: 19px; margin: 0; }
+.rp-principles li { font-size: 11px; margin: 7px 0; line-height: 1.65; }
+.rp-list { padding-left: 19px; margin: 0; }
+.rp-list li { font-size: 11px; margin: 4px 0; }
+.rp-refs { padding-left: 19px; margin: 0; }
+.rp-refs li { font-size: 10.5px; margin: 5px 0; }
+.rp-refs span { font-family: var(--font-mono); color: #1c63b7; margin-right: 5px; }
+.rp-compact td { padding: 6px 9px; }
+
+.rp-foot { display: flex; justify-content: space-between; gap: 20px; border-top: 2px solid #1c63b7; padding-top: 15px; margin-top: 32px; font-size: 9.5px; color: #637890; }
+.rp-foot strong { font-size: 11.5px; color: #0e1d30; }
+.rp-foot p { margin: 3px 0 0; font-size: 9.5px; color: #637890; }
+.rp-foot-right { text-align: right; display: flex; flex-direction: column; gap: 3px; }
+
+@media (max-width: 900px) {
+  .rp-paper { padding: 28px 24px; }
+  .rp-cover-grid, .rp-kpis { grid-template-columns: 1fr 1fr; }
+  .rp-cover-title h1 { font-size: 22px; }
+  .rp-table { font-size: 10px; }
+}
+@media screen and (max-width: 900px) {
+  .rp-table { min-width: 620px; }
+}
+@media (max-width: 600px) {
+  .rp-cover-grid, .rp-kpis { grid-template-columns: 1fr; }
+  .rp-cover-top { flex-direction: column; gap: 4px; }
+}
+
+@media print {
+  .sidebar, .topbar, .page-head, .footer, .app-band, .rp-actions, .rp-toolbar,
+  .toast-stack, .cmd-overlay, .modal-overlay, .drawer-overlay, .studio-bar,
+  .notif-panel, .dropdown-menu, .no-print { display: none !important; }
+  .main-wrap { margin: 0 !important; }
+  .content { padding: 0 !important; max-width: none !important; }
+  .rp-stage { background: #fff !important; border: 0 !important; padding: 0 !important; }
+  .rp-paper { box-shadow: none !important; border-radius: 0 !important; margin: 0 !important; max-width: none !important; padding: 14px 20px !important; }
+  .rp-section { break-inside: avoid; }
+  .rp-table { break-inside: auto; }
+  .rp-table tr { break-inside: avoid; }
+  @page { margin: 14mm; }
+}

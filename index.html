@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="T26 CSSA — Centralised AI & Data Analytics Platform Operations workspace. Position profile, platform operations, adoption, performance evaluation and support governance.">
+<meta name="color-scheme" content="light dark">
+<title>T26 · Centralised AI &amp; Data Analytics Platform Operations</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/platform.css">
+<link rel="stylesheet" href="assets/css/three-d.css">
+<link rel="stylesheet" href="assets/css/studio.css">
+<link rel="stylesheet" href="assets/css/report.css">
+</head>
+<body>
+
+<!-- ══════════════════ ICON SPRITE ══════════════════ -->
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M2 13h20"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 21v-4h6v4"/><path d="M8 7h.01M12 7h.01M16 7h.01M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-lifebuoy" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.9 4.9 4.3 4.3M14.8 14.8l4.3 4.3M19.1 4.9l-4.3 4.3M9.2 14.8l-4.3 4.3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></symbol>
+  <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></symbol>
+  <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></symbol>
+  <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></symbol>
+  <symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+  <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"/><path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.6 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5M12 15V3"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M22 3H2l8 9.5V19l4 2v-8.5L22 3Z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></symbol>
+  <symbol id="i-printer" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><rect x="6" y="14" width="12" height="8"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z"/></symbol>
+  <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3 1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3Z"/><path d="M19 16l.7 1.9L21.6 18.6l-1.9.7L19 21l-.7-1.7-1.9-.7 1.9-1.9L19 16Z"/></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="8" r="3"/><path d="M6 9v6M18 11a6 6 0 0 1-6 6H9"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 22V4M4 4h13l-2 4 2 4H4"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+  <symbol id="i-archive" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="5" rx="1"/><path d="M4 9v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9"/><path d="M10 13h4"/></symbol>
+</svg>
+
+<div class="app" id="app">
+
+  <!-- ══════════════════ SIDEBAR ══════════════════ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><rect x="1" y="1" width="38" height="38" rx="10" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".45"/><path d="M11 26V14l9 12V14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="28" cy="14" r="2.6" fill="currentColor"/><path d="M22 28h12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" opacity=".7"/></svg>
+      </div>
+      <div class="brand-text">
+        <strong>Centralised AI</strong>
+        <span>Operations Workspace</span>
+      </div>
+      <button class="icon-btn sidebar-close" id="sidebar-close" aria-label="Close navigation"><svg class="icon"><use href="#i-x"/></svg></button>
+    </div>
+
+    <div class="sidebar-scroll">
+      <nav aria-label="Primary navigation">
+        <p class="nav-label">Workspace</p>
+        <a class="nav-item active" href="#overview" data-view="overview"><svg class="icon"><use href="#i-grid"/></svg><span>Overview</span><span class="nav-key">01</span></a>
+        <a class="nav-item" href="#position" data-view="position"><svg class="icon"><use href="#i-briefcase"/></svg><span>Position Profile</span><span class="nav-key">02</span></a>
+        <a class="nav-item" href="#platforms" data-view="platforms"><svg class="icon"><use href="#i-layers"/></svg><span>Platform Catalogue</span><span class="nav-key">03</span></a>
+        <a class="nav-item" href="#console" data-view="console"><svg class="icon"><use href="#i-message"/></svg><span>Chatbot Console</span><span class="nav-key">04</span></a>
+        <a class="nav-item" href="#lab" data-view="lab"><svg class="icon"><use href="#i-activity"/></svg><span>Text Analytics Lab</span><span class="nav-key">05</span></a>
+        <a class="nav-item" href="#adoption" data-view="adoption"><svg class="icon"><use href="#i-building"/></svg><span>Adoption &amp; B/Ds</span><span class="nav-key">06</span></a>
+        <a class="nav-item" href="#desk" data-view="desk"><svg class="icon"><use href="#i-lifebuoy"/></svg><span>Service Desk</span><span class="nav-key">07</span></a>
+        <a class="nav-item" href="#performance" data-view="performance"><svg class="icon"><use href="#i-chart"/></svg><span>Performance</span><span class="nav-key">08</span></a>
+
+        <p class="nav-label">Delivery</p>
+        <a class="nav-item" href="#lifecycle" data-view="lifecycle"><svg class="icon"><use href="#i-git"/></svg><span>Delivery Lifecycle</span><span class="nav-key">09</span></a>
+        <a class="nav-item" href="#vendors" data-view="vendors"><svg class="icon"><use href="#i-users"/></svg><span>Stakeholders &amp; Vendors</span><span class="nav-key">10</span></a>
+        <a class="nav-item" href="#research" data-view="research"><svg class="icon"><use href="#i-book"/></svg><span>Gen AI Research</span><span class="nav-key">11</span></a>
+        <a class="nav-item" href="#documents" data-view="documents"><svg class="icon"><use href="#i-file"/></svg><span>Document Registry</span><span class="nav-key">12</span></a>
+
+        <p class="nav-label">Operations</p>
+        <a class="nav-item" href="#operations" data-view="operations"><svg class="icon"><use href="#i-shield"/></svg><span>Support &amp; Operations</span><span class="nav-key">13</span></a>
+        <a class="nav-item" href="#assessment" data-view="assessment"><svg class="icon"><use href="#i-clipboard"/></svg><span>Capability Assessment</span><span class="nav-key">14</span></a>
+
+        <p class="nav-label">Security &amp; Assurance</p>
+        <a class="nav-item" href="#security" data-view="security"><svg class="icon"><use href="#i-shield"/></svg><span>Security Framework</span><span class="nav-key">15</span></a>
+        <a class="nav-item" href="#controls" data-view="controls"><svg class="icon"><use href="#i-lock"/></svg><span>Security Controls</span><span class="nav-key">16</span></a>
+        <a class="nav-item" href="#risk" data-view="risk"><svg class="icon"><use href="#i-alert"/></svg><span>Risk Assessment</span><span class="nav-key">17</span></a>
+        <a class="nav-item" href="#governance" data-view="governance"><svg class="icon"><use href="#i-users"/></svg><span>Governance &amp; RACI</span><span class="nav-key">18</span></a>
+        <a class="nav-item" href="#actionplan" data-view="actionplan"><svg class="icon"><use href="#i-flag"/></svg><span>Action Plan</span><span class="nav-key">19</span></a>
+
+        <p class="nav-label">3D Studio</p>
+        <a class="nav-item" href="#twin" data-view="twin"><svg class="icon"><use href="#i-cpu"/></svg><span>Platform Digital Twin</span><span class="nav-key">20</span></a>
+
+        <p class="nav-label">Reporting</p>
+        <a class="nav-item" href="#report" data-view="report"><svg class="icon"><use href="#i-file"/></svg><span>Compiled Assurance Report</span><span class="nav-key">21</span></a>
+      </nav>
+
+      <div class="sidebar-note">
+        <div class="sidebar-note-top"><svg class="icon"><use href="#i-shield"/></svg><span>Position reference</span></div>
+        <div class="sidebar-note-ref">T26 <span>·</span> CSSA</div>
+        <p>Supporting centralised AI applications &amp; data analytics platforms for Government B/Ds.</p>
+        <div class="sidebar-note-bar"><i style="width:78%"></i></div>
+        <div class="sidebar-note-foot"><span>Profile coverage</span><strong>78%</strong></div>
+      </div>
+    </div>
+
+    <div class="sidebar-foot">
+      <span class="dot dot-green"></span> Workspace online
+      <span class="sidebar-version">v1.0</span>
+    </div>
+  </aside>
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <!-- ══════════════════ MAIN ══════════════════ -->
+  <div class="main-wrap">
+    <header class="topbar">
+      <button class="icon-btn menu-btn" id="menu-btn" aria-label="Open navigation"><svg class="icon"><use href="#i-menu"/></svg></button>
+      <div class="topbar-title">
+        <span class="topbar-ref">T26 / CSSA</span>
+        <span class="topbar-divider"></span>
+        <span>Digital Policy Office · Centralised AI Platforms</span>
+      </div>
+      <div class="topbar-actions">
+        <button class="search-trigger" id="search-trigger" aria-label="Open search">
+          <svg class="icon"><use href="#i-search"/></svg>
+          <span>Search workspace...</span>
+          <kbd>Ctrl K</kbd>
+        </button>
+        <span class="saved-indicator" id="saved-indicator" title="All changes are stored locally in this browser"><span class="dot dot-green"></span> Saved locally</span>
+        <div class="env-chip" title="Demonstration environment with editable local records"><span class="dot dot-green"></span> Operational <em>· workspace</em></div>
+        <span class="topbar-date" id="topbar-date"></span>
+        <div class="new-menu-wrap">
+          <button class="btn btn-primary btn-new" id="btn-new"><svg class="icon"><use href="#i-plus"/></svg> New <svg class="icon caret"><use href="#i-chevron-down"/></svg></button>
+          <div class="dropdown-menu" id="new-menu"></div>
+        </div>
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle colour theme" title="Toggle theme"><svg class="icon"><use href="#i-moon"/></svg></button>
+        <button class="icon-btn notif-btn" id="notif-btn" aria-label="Notifications" title="Notifications"><svg class="icon"><use href="#i-bell"/></svg><span class="notif-count" id="notif-count">0</span></button>
+        <button class="icon-btn" id="settings-btn" aria-label="Workspace settings" title="Workspace settings"><svg class="icon"><use href="#i-cpu"/></svg></button>
+        <div class="user-chip" title="Contract Senior Systems Analyst"><span class="avatar">CS</span><span class="user-meta"><strong>CSSA</strong><small>Platform Support</small></span></div>
+      </div>
+    </header>
+
+    <main class="content" id="content">
+      <div class="page-head">
+        <div class="page-head-left">
+          <div class="breadcrumb"><span>Workspace</span><svg class="icon"><use href="#i-chevron-right"/></svg><span id="breadcrumb-current">Overview</span></div>
+          <p class="page-eyebrow" id="page-eyebrow">Executive summary</p>
+          <h1 id="page-title">Overview</h1>
+          <p class="page-subtitle" id="page-subtitle">Platform health, adoption momentum and operational priorities at a glance.</p>
+        </div>
+        <div class="page-head-actions">
+          <button class="btn btn-ghost" id="btn-print"><svg class="icon"><use href="#i-printer"/></svg> Print view</button>
+          <button class="btn btn-primary" id="btn-export"><svg class="icon"><use href="#i-download"/></svg> Export snapshot</button>
+        </div>
+      </div>
+
+      <!-- ─────────── 01 · OVERVIEW ─────────── -->
+      <section class="view active" id="view-overview" aria-label="Overview">
+
+        <div class="hero">
+          <div class="hero-glow"></div>
+          <div class="hero-grid-lines"></div>
+          <div class="hero-inner">
+            <div class="hero-main">
+              <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span> POSITION T26 · CONTRACT SENIOR SYSTEMS ANALYST</div>
+              <h2>Centralised AI &amp; Data Analytics<br><em>Platform Operations</em></h2>
+              <p>Supporting the design, implementation, testing, maintenance and administration of government-wide AI capabilities — enabling adoption across bureaux and departments through dependable operations, measurable performance and responsive user support.</p>
+              <div class="hero-chips">
+                <span><svg class="icon"><use href="#i-layers"/></svg> 2 Centralised Platforms</span>
+                <span><svg class="icon"><use href="#i-building"/></svg> B/D Adoption Programme</span>
+                <span><svg class="icon"><use href="#i-sparkles"/></svg> Gen AI Market Research</span>
+                <span><svg class="icon"><use href="#i-shield"/></svg> After-hours Support</span>
+              </div>
+              <div class="hero-actions">
+                <a class="btn btn-light" href="#position"><svg class="icon"><use href="#i-briefcase"/></svg> View position profile</a>
+                <a class="btn btn-outline-light" href="#twin"><svg class="icon"><use href="#i-cpu"/></svg> Open 3D digital twin <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+                <a class="btn btn-outline-light" href="#operations">Operations playbook <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+              </div>
+            </div>
+            <div class="hero-panel">
+              <div class="hero-panel-head"><span class="dot dot-green"></span> Live service posture</div>
+              <div class="hero-panel-row"><span>Chatbot-as-a-Service</span><strong>Operational</strong></div>
+              <div class="hero-panel-row"><span>Social Media Text Analytics</span><strong>Operational</strong></div>
+              <div class="hero-panel-row"><span>Open P1 incidents</span><strong class="accent-green">0</strong></div>
+              <div class="hero-panel-row"><span>Change freeze</span><strong>None</strong></div>
+              <div class="hero-panel-sep"></div>
+              <div class="hero-panel-kpi"><span class="hero-panel-num" data-count="99.87" data-decimals="2">99.87</span><span class="hero-panel-unit">%</span></div>
+              <div class="hero-panel-cap">Rolling 90-day platform availability</div>
+              <div class="hero-panel-track"><i style="width:99.87%"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-head"><div><h3>Key indicators</h3><p>Rolling 30-day operational summary</p></div><span class="section-tag"><svg class="icon"><use href="#i-clock"/></svg> Updated just now</span></div>
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-top"><span class="kpi-icon blue"><svg class="icon"><use href="#i-activity"/></svg></span><span class="delta up"><svg class="icon"><use href="#i-trend"/></svg> +0.12%</span></div>
+            <p class="kpi-label">Platform availability</p>
+            <div class="kpi-value"><span data-count="99.87" data-decimals="2">99.87</span><small>%</small></div>
+            <div class="spark" data-spark="availability"></div>
+            <div class="kpi-foot">Target ≥ 99.5% <span>·</span> SLA met</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-top"><span class="kpi-icon teal"><svg class="icon"><use href="#i-building"/></svg></span><span class="delta up"><svg class="icon"><use href="#i-trend"/></svg> +3 this month</span></div>
+            <p class="kpi-label">B/Ds live on platform</p>
+            <div class="kpi-value"><span data-count="14">14</span><small>/ 22</small></div>
+            <div class="spark" data-spark="adoption"></div>
+            <div class="kpi-foot">8 in active pipeline <span>·</span> 64% coverage</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-top"><span class="kpi-icon violet"><svg class="icon"><use href="#i-message"/></svg></span><span class="delta up"><svg class="icon"><use href="#i-trend"/></svg> +18.4%</span></div>
+            <p class="kpi-label">Monthly AI interactions</p>
+            <div class="kpi-value"><span data-count="486" >486</span><small>K</small></div>
+            <div class="spark" data-spark="volume"></div>
+            <div class="kpi-foot">Conversations + text items analysed</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-top"><span class="kpi-icon amber"><svg class="icon"><use href="#i-lifebuoy"/></svg></span><span class="delta up"><svg class="icon"><use href="#i-trend"/></svg> +2.1%</span></div>
+            <p class="kpi-label">Support tickets resolved</p>
+            <div class="kpi-value"><span data-count="128">128</span><small> tickets</small></div>
+            <div class="spark" data-spark="tickets"></div>
+            <div class="kpi-foot">94% within response SLA</div>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="card">
+            <div class="card-head"><div><h3>Platform health</h3><p>Current service status and 30-day uptime</p></div><a class="card-link" href="#platforms">Details <svg class="icon"><use href="#i-arrow-up-right"/></svg></a></div>
+            <div class="health-list" id="health-list"></div>
+          </div>
+          <div class="card">
+            <div class="card-head"><div><h3>Adoption pipeline</h3><p>B/D progression across onboarding stages</p></div><a class="card-link" href="#adoption">Full register <svg class="icon"><use href="#i-arrow-up-right"/></svg></a></div>
+            <div id="adoption-funnel" class="funnel-wrap"></div>
+          </div>
+        </div>
+
+        <div class="two-col two-col-60">
+          <div class="card">
+            <div class="card-head"><div><h3>Recent activity</h3><p>Coordination, releases and support events</p></div><span class="section-tag"><svg class="icon"><use href="#i-refresh"/></svg> Live feed</span></div>
+            <div class="timeline" id="activity-timeline"></div>
+          </div>
+          <div class="stack-col">
+            <div class="card">
+              <div class="card-head"><div><h3>This week's priorities</h3><p>Operational focus items</p></div></div>
+              <ul class="priority-list" id="priority-list"></ul>
+            </div>
+            <div class="card quick-card">
+              <div class="card-head"><div><h3>Quick access</h3><p>Frequently used workspaces</p></div></div>
+              <div class="quick-grid">
+                <a href="#adoption"><svg class="icon"><use href="#i-building"/></svg><span>Adoption register</span></a>
+                <a href="#performance"><svg class="icon"><use href="#i-chart"/></svg><span>Evaluation metrics</span></a>
+                <a href="#documents"><svg class="icon"><use href="#i-file"/></svg><span>Document registry</span></a>
+                <a href="#operations"><svg class="icon"><use href="#i-lifebuoy"/></svg><span>Incident playbook</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-head"><div><h3>Scope of the position</h3><p>Seven responsibility areas from the T26 job description</p></div></div>
+        <div class="scope-grid" id="scope-grid"></div>
+      </section>
+
+      <!-- ─────────── 02 · POSITION PROFILE ─────────── -->
+      <section class="view" id="view-position" aria-label="Position Profile">
+        <div class="callout callout-brand">
+          <span class="callout-icon"><svg class="icon"><use href="#i-info"/></svg></span>
+          <div><strong>Source of truth</strong><p>The content below is derived directly from the T26 project nature, job description and requirement details. Operational figures elsewhere in this workspace are illustrative sample data for demonstration purposes.</p></div>
+        </div>
+
+        <div class="two-col two-col-60">
+          <div class="card prose-card">
+            <div class="card-head"><div><h3>Project nature</h3><p>Why this position exists</p></div><span class="pill pill-blue">T26</span></div>
+            <p class="lead">This is a CSSA position responsible for supporting and operating multiple centralised Artificial Intelligence (AI) and data analytic platforms, including <strong>Chatbot-as-a-Service</strong> and the <strong>Social Media Text Analytics System</strong>.</p>
+            <p>The position is required to evaluate the performance of the platforms to facilitate adoption by Government bureaux and departments (B/Ds), and to ensure smooth operations of the platforms. It sits at the intersection of technical delivery, service operations and cross-departmental coordination — translating a shared government capability into services that individual B/Ds can confidently adopt.</p>
+            <div class="quote-strip"><span></span><p><em>"Evaluate performance · Facilitate adoption · Ensure smooth operations"</em></p></div>
+            <div class="tag-row"><span class="pill pill-soft">Centralised AI</span><span class="pill pill-soft">Data Analytics</span><span class="pill pill-soft">Shared Platform Services</span><span class="pill pill-soft">Government B/Ds</span></div>
+          </div>
+          <div class="card">
+            <div class="card-head"><div><h3>Role at a glance</h3><p>Position facts</p></div></div>
+            <dl class="def-list">
+              <div><dt>Post reference</dt><dd>T26</dd></div>
+              <div><dt>Position</dt><dd>CSSA</dd></div>
+              <div><dt>Service domain</dt><dd>Centralised AI &amp; data analytics platforms</dd></div>
+              <div><dt>Core platforms</dt><dd>Chatbot-as-a-Service; Social Media Text Analytics System</dd></div>
+              <div><dt>Primary stakeholders</dt><dd>Contractors, internal teams, consulting teams, B/Ds</dd></div>
+              <div><dt>Core objective</dt><dd>Platform performance evaluation to drive B/D adoption</dd></div>
+              <div><dt>Work pattern</dt><dd>Normal office hours + after-hours support when necessary</dd></div>
+              <div><dt>Reporting</dt><dd>Supervisors / project leadership</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="section-head"><div><h3>Job description</h3><p>Seven duties of the successful applicant, mapped to deliverables</p></div><span class="section-tag">7 duties</span></div>
+        <div class="duty-grid" id="duty-grid"></div>
+
+        <div class="section-head"><div><h3>Requirement details</h3><p>Knowledge, experience and personal attributes sought</p></div></div>
+        <div class="two-col">
+          <div class="card">
+            <div class="card-head"><div><h3>Capability &amp; attributes</h3><p>Six requirement statements</p></div></div>
+            <ol class="req-list" id="req-list"></ol>
+          </div>
+          <div class="card">
+            <div class="card-head"><div><h3>Mandatory experience thresholds</h3><p>Minimum 3 years in each of four skill areas</p></div><span class="pill pill-amber">≥ 3 years</span></div>
+            <div class="threshold-block">
+              <p class="group-label"><svg class="icon"><use href="#i-cpu"/></svg> Technical skills</p>
+              <div id="thresholds-tech"></div>
+              <p class="group-label"><svg class="icon"><use href="#i-users"/></svg> Non-technical skills</p>
+              <div id="thresholds-nontech"></div>
+            </div>
+            <div class="threshold-note"><svg class="icon"><use href="#i-info"/></svg><span>The marker on each bar represents the <strong>3-year minimum</strong>. Evidence should be demonstrable through project records, system support logs and vendor engagement history.</span></div>
+          </div>
+        </div>
+
+        <div class="section-head"><div><h3>What success looks like</h3><p>Outcome framing for performance discussions</p></div></div>
+        <div class="outcome-grid">
+          <div class="outcome-card"><span class="outcome-no">01</span><svg class="icon"><use href="#i-target"/></svg><h4>Adoption with evidence</h4><p>B/Ds onboard using credible evaluation results, clear onboarding artefacts and responsive technical support — not just platform availability.</p></div>
+          <div class="outcome-card"><span class="outcome-no">02</span><svg class="icon"><use href="#i-activity"/></svg><h4>Operations without surprises</h4><p>Proactive monitoring, disciplined change control and rehearsed incident response keep shared services stable through peaks and special events.</p></div>
+          <div class="outcome-card"><span class="outcome-no">03</span><svg class="icon"><use href="#i-shield"/></svg><h4>Assurance by design</h4><p>Current, accessible documentation and traceable decisions across contractors, internal teams, consulting teams and B/Ds.</p></div>
+        </div>
+      </section>
+
+      <!-- ─────────── 03 · PLATFORMS ─────────── -->
+      <section class="view" id="view-platforms" aria-label="Platforms">
+        <div class="tabs" role="tablist" id="platform-tabs">
+          <button class="tab active" role="tab" data-tab="chatbot" aria-selected="true"><svg class="icon"><use href="#i-message"/></svg> Chatbot-as-a-Service</button>
+          <button class="tab" role="tab" data-tab="smta" aria-selected="false"><svg class="icon"><use href="#i-activity"/></svg> Social Media Text Analytics</button>
+          <button class="tab" role="tab" data-tab="shared" aria-selected="false"><svg class="icon"><use href="#i-layers"/></svg> Shared Foundation</button>
+        </div>
+
+        <div class="tab-panel active" id="tab-chatbot" role="tabpanel">
+          <div class="platform-hero">
+            <div class="platform-hero-main">
+              <div class="ph-eyebrow">CENTRALISED AI APPLICATION · 01</div>
+              <h3>Chatbot-as-a-Service</h3>
+              <p>A shared conversational AI capability offered to B/Ds as a managed service: reusable dialogue components, centrally governed knowledge bases, standard integrations and a common analytics layer — so departments can deploy public-facing assistants without building their own stacks.</p>
+              <div class="tag-row"><span class="pill pill-soft">Multi-tenant</span><span class="pill pill-soft">Intent &amp; knowledge management</span><span class="pill pill-soft">Omni-channel</span><span class="pill pill-soft">Gen AI ready</span></div>
+            </div>
+            <div class="platform-hero-stats">
+              <span class="status-pill"><span class="dot dot-green"></span> Operational</span>
+              <div><strong>14</strong><small>B/D tenants live</small></div>
+              <div><strong>312K</strong><small>Conversations / month</small></div>
+              <div><strong>92.4%</strong><small>Intent resolution rate</small></div>
+              <div><strong>1.2s</strong><small>Median response time</small></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head"><div><h3>Service architecture</h3><p>Logical flow from citizen channel through to governance and analytics</p></div></div>
+            <div class="flow" id="flow-chatbot"></div>
+          </div>
+
+          <div class="two-col two-col-60">
+            <div class="card">
+              <div class="card-head"><div><h3>Capability set</h3><p>What the shared service provides</p></div></div>
+              <div class="cap-grid" id="cap-chatbot"></div>
+            </div>
+            <div class="card">
+              <div class="card-head"><div><h3>Technical &amp; operations profile</h3><p>Administration reference</p></div></div>
+              <table class="spec-table"><tbody>
+                <tr><th>Service model</th><td>Centralised multi-tenant managed service</td></tr>
+                <tr><th>Channel adapters</th><td>Web widget, departmental portals, mobile, API</td></tr>
+                <tr><th>Knowledge base</th><td>Version-controlled corpora with approval workflow</td></tr>
+                <tr><th>Language support</th><td>Traditional Chinese, Simplified Chinese, English</td></tr>
+                <tr><th>Model layer</th><td>Intent classification, retrieval augmentation, LLM gateway</td></tr>
+                <tr><th>Integration</th><td>REST / webhooks, authentication gateway, audit logging</td></tr>
+                <tr><th>Release cadence</th><td>Fortnightly minor · quarterly major</td></tr>
+                <tr><th>Support coverage</th><td>Office hours + on-call for urgent deployment</td></tr>
+              </tbody></table>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div class="card"><div class="card-head"><div><h3>Support responsibilities</h3><p>Design → administration coverage</p></div></div><ul class="tick-list">
+              <li>Review dialogue designs and knowledge content submitted by B/Ds against platform standards.</li><li>Coordinate implementation and tenant configuration with contractors and consulting teams.</li><li>Plan and execute UAT, regression and accessibility test cycles before each release.</li><li>Monitor intent accuracy, fallback rates and containment; drive tuning with vendors.</li><li>Administer tenant onboarding, access roles, content approval and decommissioning.</li><li>Provide first-line technical and user support, including after-hours escalation.</li>
+            </ul></div>
+            <div class="card"><div class="card-head"><div><h3>Current release &amp; roadmap</h3><p>Forward look</p></div><span class="pill pill-blue">v3.4</span></div><div class="roadmap" id="roadmap-chatbot"></div></div>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="tab-smta" role="tabpanel">
+          <div class="platform-hero platform-hero-teal">
+            <div class="platform-hero-main">
+              <div class="ph-eyebrow">CENTRALISED DATA ANALYTICS PLATFORM · 02</div>
+              <h3>Social Media Text Analytics System</h3>
+              <p>A shared text analytics capability that ingests public social media and related text sources, then applies sentiment, topic, trend and anomaly analytics to produce actionable insight for B/Ds — with consistent taxonomy, dashboards and exportable reporting across departments.</p>
+              <div class="tag-row"><span class="pill pill-soft">Stream ingestion</span><span class="pill pill-soft">Sentiment &amp; topic models</span><span class="pill pill-soft">Trend detection</span><span class="pill pill-soft">Dashboard &amp; reporting</span></div>
+            </div>
+            <div class="platform-hero-stats">
+              <span class="status-pill"><span class="dot dot-green"></span> Operational</span>
+              <div><strong>174K</strong><small>Text items / month</small></div>
+              <div><strong>9</strong><small>B/D dashboards</small></div>
+              <div><strong>86.7%</strong><small>Sentiment agreement</small></div>
+              <div><strong>&lt; 5 min</strong><small>Ingestion latency</small></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head"><div><h3>Data &amp; analytics pipeline</h3><p>From public text sources to departmental insight</p></div></div>
+            <div class="flow" id="flow-smta"></div>
+          </div>
+
+          <div class="two-col two-col-60">
+            <div class="card">
+              <div class="card-head"><div><h3>Analytics capabilities</h3><p>Shared functions available to B/Ds</p></div></div>
+              <div class="cap-grid" id="cap-smta"></div>
+            </div>
+            <div class="card">
+              <div class="card-head"><div><h3>Technical &amp; operations profile</h3><p>Administration reference</p></div></div>
+              <table class="spec-table"><tbody>
+                <tr><th>Ingestion</th><td>Scheduled collectors + streaming connectors, rate-limited</td></tr>
+                <tr><th>Processing</th><td>Normalisation, de-duplication, language detection, PII screening</td></tr>
+                <tr><th>Analytics</th><td>Sentiment, topic clustering, entity extraction, spike detection</td></tr>
+                <tr><th>Storage</th><td>Partitioned text store with defined retention schedule</td></tr>
+                <tr><th>Reporting</th><td>Role-based dashboards, scheduled digests, CSV / API export</td></tr>
+                <tr><th>Quality control</th><td>Sampled human validation, drift monitoring, model re-training</td></tr>
+                <tr><th>Governance</th><td>Data classification, access logging, privacy impact assessment</td></tr>
+                <tr><th>Support coverage</th><td>Office hours + surge monitoring during special events</td></tr>
+              </tbody></table>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div class="card"><div class="card-head"><div><h3>Support responsibilities</h3><p>Design → administration coverage</p></div></div><ul class="tick-list">
+              <li>Maintain ingestion connectors and monitor collector health, coverage and freshness.</li><li>Validate sentiment and topic model quality against sampled human-labelled datasets.</li><li>Coordinate dashboard configuration and reporting requirements with individual B/Ds.</li><li>Administer query quotas, retention, export permissions and data classification.</li><li>Support surge monitoring and rapid reporting during public events and incidents.</li><li>Document model changes, evaluation results and data-handling decisions.</li>
+            </ul></div>
+            <div class="card"><div class="card-head"><div><h3>Current release &amp; roadmap</h3><p>Forward look</p></div><span class="pill pill-teal">v2.7</span></div><div class="roadmap" id="roadmap-smta"></div></div>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="tab-shared" role="tabpanel">
+          <div class="callout callout-teal">
+            <span class="callout-icon"><svg class="icon"><use href="#i-layers"/></svg></span>
+            <div><strong>One foundation, two services</strong><p>Both platforms are operated as centralised services. Shared controls keep tenant isolation, security, observability and governance consistent — reducing duplicated effort for B/Ds and simplifying assurance.</p></div>
+          </div>
+          <div class="shared-grid" id="shared-grid"></div>
+          <div class="card">
+            <div class="card-head"><div><h3>Shared control matrix</h3><p>Common controls applied across both platforms</p></div></div>
+            <div class="table-scroll"><table class="data-table"><thead><tr><th>Control domain</th><th>Standard applied</th><th>Owner</th><th>Review cycle</th><th>Status</th></tr></thead><tbody id="shared-controls"></tbody></table></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────────── 04 · ADOPTION ─────────── -->
+      <section class="view" id="view-adoption" aria-label="Adoption and B/Ds">
+        <div class="stat-strip">
+          <div><span>Total B/Ds in programme</span><strong id="adstat-total">—</strong></div>
+          <div><span>Live on a platform</span><strong id="adstat-live">—</strong></div>
+          <div><span>In active pipeline</span><strong id="adstat-pipeline">—</strong></div>
+          <div><span>Adoption rate</span><strong id="adstat-rate">—</strong></div>
+          <div><span>Target by year end</span><strong>20</strong></div>
+        </div>
+
+        <div class="callout callout-brand"><span class="callout-icon"><svg class="icon"><use href="#i-info"/></svg></span><div><strong>Promote · Arrange adoption · Provide support</strong><p>The position promotes the centralised AI applications and data analytics platform, arranges adoption and provides technical and user support for Government B/Ds. The register below illustrates how that pipeline can be tracked.</p></div></div>
+
+        <div class="two-col two-col-60">
+          <div class="card">
+            <div class="card-head"><div><h3>Adoption register</h3><p>Illustrative B/D onboarding records</p></div><span class="section-tag" id="bd-count">—</span></div>
+            <div class="toolbar">
+              <label class="search-field"><svg class="icon"><use href="#i-search"/></svg><input type="search" id="bd-search" placeholder="Search B/D, use case, owner..." aria-label="Search adoption register"></label>
+              <div class="chip-filters" id="bd-filter"></div>
+              <div class="toolbar-actions"><button class="btn btn-ghost btn-sm" data-act="export" data-reg="bd"><svg class="icon"><use href="#i-download"/></svg> CSV</button><button class="btn btn-primary btn-sm" data-act="add" data-reg="bd"><svg class="icon"><use href="#i-plus"/></svg> Add B/D</button></div>
+            </div>
+            <div class="table-scroll"><table class="data-table sortable" id="bd-table">
+              <thead><tr>
+                <th data-sort="name">Bureau / Department <svg class="icon"><use href="#i-chevron-down"/></svg></th>
+                <th data-sort="platform">Platform</th>
+                <th data-sort="stage">Stage <svg class="icon"><use href="#i-chevron-down"/></svg></th>
+                <th data-sort="usecase">Use case</th>
+                <th data-sort="owner">Owner</th>
+                <th data-sort="golive">Target go-live</th>
+              </tr></thead><tbody id="bd-tbody"></tbody>
+            </table></div>
+            <div class="table-foot"><span>Local demonstration workspace · records are editable in this browser</span><span id="bd-showing"></span></div>
+            <div class="reg-pager" id="bd-pager"></div>
+            <div class="reg-bulk" id="bd-bulk"></div>
+          </div>
+          <div class="stack-col">
+            <div class="card">
+              <div class="card-head"><div><h3>Pipeline distribution</h3><p>B/Ds by onboarding stage</p></div></div>
+              <div id="adoption-donut" class="donut-wrap"></div>
+            </div>
+            <div class="card">
+              <div class="card-head"><div><h3>Adoption playbook</h3><p>Repeatable five-step onboarding</p></div></div>
+              <ol class="step-list" id="adoption-steps"></ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><div><h3>Technical &amp; user support model</h3><p>How B/Ds are supported before and after go-live</p></div></div>
+          <div class="support-grid" id="support-grid"></div>
+        </div>
+      </section>
+
+      <!-- ─────────── 04 · CHATBOT CONSOLE (live application) ─────────── -->
+      <section class="view" id="view-console" aria-label="Chatbot Console">
+        <div class="app-band">
+          <div class="app-band-icon"><svg class="icon"><use href="#i-message"/></svg></div>
+          <div><span class="app-band-tag">LIVE APPLICATION · CENTRALISED AI</span><h3>Chatbot-as-a-Service · Operator Console</h3>
+            <p>A working tenant-scoped assistant. Queries are matched against the governed knowledge base, scored for intent confidence, grounded with a citation and routed to fallback or escalation when confidence is below the configured threshold.</p></div>
+          <span class="status-pill"><span class="dot dot-green"></span> Service online</span>
+        </div>
+        <div class="console-layout">
+          <div class="card chat-card">
+            <div class="card-head">
+              <div><h3>Conversation simulator</h3><p>Select a live B/D tenant and test a citizen enquiry</p></div>
+              <div class="chat-controls">
+                <label class="inline-select"><span>Tenant</span><select id="chat-tenant" aria-label="Select B/D tenant"></select></label>
+                <button class="btn btn-ghost btn-sm" data-act="chat-clear"><svg class="icon"><use href="#i-refresh"/></svg> Clear</button>
+              </div>
+            </div>
+            <div class="chat-window" id="chat-window" aria-live="polite"></div>
+            <div class="chat-suggest" id="chat-suggest"></div>
+            <div class="chat-compose">
+              <input type="text" id="chat-input" placeholder="Type a citizen enquiry and press Enter..." autocomplete="off" aria-label="Chat message">
+              <button class="btn btn-primary" data-act="chat-send" id="chat-send"><svg class="icon"><use href="#i-arrow-right"/></svg> Send</button>
+            </div>
+            <div class="chat-foot">
+              <span id="chat-disclaimer"><svg class="icon"><use href="#i-shield"/></svg> Grounded answers only · no free-form generative output</span>
+              <div><button class="mini-btn" data-act="chat-escalate"><svg class="icon"><use href="#i-lifebuoy"/></svg> Escalate to service desk</button><button class="mini-btn" data-act="chat-export"><svg class="icon"><use href="#i-download"/></svg> Transcript</button></div>
+            </div>
+          </div>
+          <div class="stack-col">
+            <div class="card"><div class="card-head"><div><h3>Session telemetry</h3><p>Computed from this session</p></div></div><div id="chat-telemetry" class="telemetry-grid"></div></div>
+            <div class="card">
+              <div class="card-head"><div><h3>Governed knowledge base</h3><p>Corpus entries are editable and versioned</p></div><button class="btn btn-ghost btn-sm" data-act="add" data-reg="kb"><svg class="icon"><use href="#i-plus"/></svg> Add</button></div>
+              <div id="kb-list" class="kb-list"></div>
+            </div>
+            <div class="card"><div class="card-head"><div><h3>Response guardrails</h3><p>Applied to every answer</p></div></div><div id="guardrail-list" class="guardrail-list"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────────── 05 · TEXT ANALYTICS LAB (live application) ─────────── -->
+      <section class="view" id="view-lab" aria-label="Text Analytics Lab">
+        <div class="app-band app-band-teal">
+          <div class="app-band-icon"><svg class="icon"><use href="#i-activity"/></svg></div>
+          <div><span class="app-band-tag">LIVE APPLICATION · CENTRALISED DATA ANALYTICS</span><h3>Social Media Text Analytics · Analysis Workbench</h3>
+            <p>Run sentiment, topic, entity and privacy screening over text, then commit results to the monitored stream. Every chart and KPI on this page is recomputed from the live corpus.</p></div>
+          <span class="status-pill"><span class="dot dot-green"></span> Pipeline ready</span>
+        </div>
+        <div class="two-col two-col-60">
+          <div class="card">
+            <div class="card-head"><div><h3>Analyse text</h3><p>Multilingual · English and Traditional Chinese</p></div><span class="pill pill-teal">Deterministic model</span></div>
+            <textarea id="lab-input" class="lab-textarea" rows="6" placeholder="Paste a public post, feedback item or enquiry text to analyse..."></textarea>
+            <div class="lab-samples" id="lab-samples"></div>
+            <div class="lab-actions"><button class="btn btn-primary" data-act="lab-analyse"><svg class="icon"><use href="#i-sparkles"/></svg> Analyse text</button><button class="btn btn-ghost" data-act="lab-addstream"><svg class="icon"><use href="#i-plus"/></svg> Add to monitored stream</button><button class="btn btn-ghost" data-act="lab-clear">Clear</button></div>
+            <div id="lab-result" class="lab-result"></div>
+          </div>
+          <div class="stack-col">
+            <div class="card"><div class="card-head"><div><h3>Corpus overview</h3><p>Recomputed from live analysed items</p></div><span class="section-tag" id="lab-count">—</span></div><div id="lab-stats" class="lab-stats"></div></div>
+            <div class="card"><div class="card-head"><div><h3>Topic distribution</h3><p>Share of items matching each theme</p></div></div><div id="lab-topics" class="lab-topics"></div></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-head"><div><h3>Monitored stream</h3><p>Analysed items held in this workspace</p></div><div><button class="btn btn-ghost btn-sm" data-act="lab-export"><svg class="icon"><use href="#i-download"/></svg> Export CSV</button></div></div>
+          <div class="table-scroll"><table class="data-table" id="lab-table"><tbody id="lab-tbody"></tbody></table></div>
+          <div class="table-foot"><span>Local demonstration workspace · records are editable in this browser</span><span id="lab-showing"></span></div>
+        </div>
+      </section>
+
+      <!-- ─────────── 07 · SERVICE DESK (working application) ─────────── -->
+      <section class="view" id="view-desk" aria-label="Service Desk">
+        <div class="app-band app-band-amber">
+          <div class="app-band-icon"><svg class="icon"><use href="#i-lifebuoy"/></svg></div>
+          <div><span class="app-band-tag">WORKING APPLICATION · TECHNICAL &amp; USER SUPPORT</span><h3>Service Desk &amp; Incident Console</h3>
+            <p>Log, triage, assign and resolve technical and user support requests from B/Ds. Priority drives an SLA countdown; status changes are written to the audit trail and surfaced as notifications.</p></div>
+          <span class="status-pill"><span class="dot dot-green"></span> Desk open</span>
+        </div>
+        <div class="stat-strip">
+          <div><span>Open tickets</span><strong id="desk-open">0</strong></div>
+          <div><span>In progress</span><strong id="desk-progress">0</strong></div>
+          <div><span>Resolved</span><strong id="desk-resolved">0</strong></div>
+          <div><span>At SLA risk</span><strong id="desk-sla">0</strong></div>
+          <div><span>Total records</span><strong id="desk-total">0</strong></div>
+        </div>
+        <div class="two-col two-col-65">
+          <div class="card">
+            <div class="card-head"><div><h3>Incident register</h3><p>Full lifecycle: open → in progress → pending B/D → resolved</p></div><div><button class="btn btn-primary btn-sm" data-act="add" data-reg="tickets"><svg class="icon"><use href="#i-plus"/></svg> New incident</button></div></div>
+            <div class="toolbar"><label class="search-field"><svg class="icon"><use href="#i-search"/></svg><input type="search" id="tk-search" placeholder="Search subject, B/D, assignee, ID..." aria-label="Search incidents"></label><div class="chip-filters" id="tk-filter"></div></div>
+            <div class="table-scroll"><table class="data-table sortable" id="tk-table"><tbody id="tk-tbody"></tbody></table></div>
+            <div class="table-foot"><span>Local demonstration workspace · records are editable in this browser</span><span id="tk-showing"></span></div>
+            <div class="reg-pager" id="tk-pager"></div>
+            <div class="reg-bulk" id="tk-bulk"></div>
+          </div>
+          <div class="stack-col">
+            <div class="card"><div class="card-head"><div><h3>SLA watchlist</h3><p>Unresolved tickets by remaining response window</p></div></div><div id="desk-watchlist" class="watchlist"></div></div>
+            <div class="card"><div class="card-head"><div><h3>Workload by priority</h3><p>Open and in-progress items</p></div></div><div id="desk-priority" class="desk-priority"></div></div>
+            <div class="card"><div class="card-head"><div><h3>Desk controls</h3><p>Support operations shortcuts</p></div></div><div class="desk-controls">
+              <button class="btn btn-ghost btn-block" data-act="export" data-reg="tickets"><svg class="icon"><use href="#i-download"/></svg> Export incident register (CSV)</button>
+              <button class="btn btn-ghost btn-block" data-act="goto" data-view="operations"><svg class="icon"><use href="#i-shield"/></svg> Open severity &amp; escalation matrix</button>
+              <button class="btn btn-ghost btn-block" data-act="goto" data-view="console"><svg class="icon"><use href="#i-message"/></svg> Reproduce in Chatbot Console</button>
+            </div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────────── 05 · PERFORMANCE ─────────── -->
+      <section class="view" id="view-performance" aria-label="Performance Evaluation">
+        <div class="callout callout-brand"><span class="callout-icon"><svg class="icon"><use href="#i-target"/></svg></span><div><strong>Performance evaluation drives adoption</strong><p>The position is required to evaluate platform performance to facilitate B/D adoption. A transparent, repeatable measurement framework lets departments make evidence-based decisions about the shared services.</p></div></div>
+
+        <div class="section-head"><div><h3>Evaluation dashboard</h3><p>Platform performance against defined targets</p></div>
+          <div class="segmented" id="period-toggle"><button class="seg active" data-period="12">12 months</button><button class="seg" data-period="6">6 months</button></div>
+        </div>
+        <div class="metric-grid" id="metric-grid"></div>
+
+        <div class="two-col two-col-65">
+          <div class="card">
+            <div class="card-head"><div><h3>Platform usage trend</h3><p>Monthly interactions across both centralised platforms</p></div><div class="legend" id="chart-legend"></div></div>
+            <div class="chart-box" id="chart-interactions"></div>
+            <div class="chart-foot"><span>Values in thousands (K) · illustrative sample data</span><span id="chart-range"></span></div>
+          </div>
+          <div class="stack-col">
+            <div class="card">
+              <div class="card-head"><div><h3>Support ticket mix</h3><p>By category, rolling 30 days</p></div></div>
+              <div id="donut-tickets" class="donut-wrap"></div>
+            </div>
+            <div class="card">
+              <div class="card-head"><div><h3>SLA attainment</h3><p>Response target met by platform</p></div></div>
+              <div id="bar-sla" class="bars-wrap"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><div><h3>Evaluation framework</h3><p>Metric definitions, targets and current results</p></div><span class="section-tag">12 measures</span></div>
+          <div class="table-scroll"><table class="data-table"><thead><tr><th>Dimension</th><th>Metric</th><th>Definition</th><th>Target</th><th>Current</th><th>Status</th></tr></thead><tbody id="framework-tbody"></tbody></table></div>
+        </div>
+
+        <div class="two-col">
+          <div class="card"><div class="card-head"><div><h3>Evaluation method</h3><p>Keeping results credible and comparable</p></div></div><ol class="step-list" id="eval-steps"></ol></div>
+          <div class="card"><div class="card-head"><div><h3>Reporting cadence</h3><p>Who sees what, and when</p></div></div><div class="cadence-list" id="cadence-list"></div></div>
+        </div>
+      </section>
+
+      <!-- ─────────── 06 · LIFECYCLE ─────────── -->
+      <section class="view" id="view-lifecycle" aria-label="Delivery Lifecycle">
+        <div class="callout callout-brand"><span class="callout-icon"><svg class="icon"><use href="#i-git"/></svg></span><div><strong>Full lifecycle coverage</strong><p>The successful applicant supports the <strong>design, implementation, testing, maintenance and administration</strong> of the centralised AI applications and data analytics platform. Each stage below lists typical activities, artefacts and control points.</p></div></div>
+        <div class="lifecycle-flow" id="lifecycle-flow"></div>
+        <div class="section-head"><div><h3>Stage detail</h3><p>Activities, artefacts and exit criteria</p></div></div>
+        <div class="stage-grid" id="stage-grid"></div>
+
+        <div class="two-col">
+          <div class="card">
+            <div class="card-head"><div><h3>Testing &amp; quality gates</h3><p>Verification before any production release</p></div></div>
+            <div class="table-scroll"><table class="data-table"><thead><tr><th>Gate</th><th>Scope</th><th>Entry criteria</th><th>Owner</th><th>Outcome</th></tr></thead><tbody id="gates-tbody"></tbody></table></div>
+          </div>
+          <div class="stack-col">
+            <div class="card">
+              <div class="card-head"><div><h3>Change &amp; release control</h3><p>Protecting a shared, multi-B/D service</p></div></div>
+              <ul class="tick-list" id="change-list"></ul>
+            </div>
+            <div class="card">
+              <div class="card-head"><div><h3>Lifecycle RACI</h3><p>Indicative responsibility split</p></div></div>
+              <div class="table-scroll"><table class="data-table raci"><thead><tr><th>Activity</th><th>CSSA</th><th>Contractor</th><th>Consulting</th><th>B/D</th></tr></thead><tbody id="raci-tbody"></tbody></table></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────────── 07 · STAKEHOLDERS & VENDORS ─────────── -->
+      <section class="view" id="view-vendors" aria-label="Stakeholders and Vendors">
+        <div class="callout callout-brand"><span class="callout-icon"><svg class="icon"><use href="#i-users"/></svg></span><div><strong>Effective information flow</strong><p>The position coordinates with different parties — <strong>contractors, internal teams, consulting teams and other B/Ds</strong> — to ensure effective information flow for AI development in the Government. Vendor Management of at least 3 years is a stated requirement.</p></div></div>
+
+        <div class="section-head"><div><h3>Stakeholder map</h3><p>Four coordination surfaces and their protocols</p></div></div>
+        <div class="stake-grid" id="stake-grid"></div>
+
+        <div class="card">
+          <div class="card-head"><div><h3>Information flow</h3><p>How decisions, issues and changes travel between parties</p></div></div>
+          <div class="info-flow" id="info-flow"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><div><h3>Vendor &amp; contractor register</h3><p>Engagements, service levels and review cadence</p></div><div><button class="btn btn-primary btn-sm" data-act="add" data-reg="vendors"><svg class="icon"><use href="#i-plus"/></svg> Add engagement</button></div></div>
+          <div class="toolbar"><label class="search-field"><svg class="icon"><use href="#i-search"/></svg><input type="search" id="vendor-search" placeholder="Search party, scope, contract..." aria-label="Search vendor register"></label><div class="toolbar-actions"><button class="btn btn-ghost btn-sm" data-act="export" data-reg="vendors"><svg class="icon"><use href="#i-download"/></svg> CSV</button></div></div>
+          <div class="table-scroll"><table class="data-table sortable" id="vendor-table"><tbody id="vendor-tbody"></tbody></table></div>
+          <div class="table-foot"><span>Local demonstration workspace · records are editable in this browser</span><span id="vendor-showing"></span></div>
+          <div class="reg-pager" id="vendor-pager"></div>
+          <div class="reg-bulk" id="vendor-bulk"></div>
+        </div>
+
+        <div class="two-col">
+          <div class="card"><div class="card-head"><div><h3>Coordination cadence</h3><p>Standing forums that keep information moving</p></div></div><div class="cadence-list" id="coordination-list"></div></div>
+          <div class="card"><div class="card-head"><div><h3>Vendor management controls</h3><p>Practical disciplines for a 3+ year competency</p></div></div><ul class="tick-list" id="vendor-controls"></ul></div>
+        </div>
+      </section>
+
+      <!-- ─────────── 08 · GEN AI RESEARCH ─────────── -->
+      <section class="view" id="view-research" aria-label="Gen AI Research">
+        <div class="callout callout-brand"><span class="callout-icon"><svg class="icon"><use href="#i-book"/></svg></span><div><strong>Market research &amp; analysis</strong><p>The position conducts market researches and analyses of the development of <strong>Gen AI and data analytics related subjects</strong>. Findings inform platform roadmaps, adoption advice and governance positions for B/Ds.</p></div></div>
+
+        <div class="section-head"><div><h3>Research register</h3><p>Topic briefs, findings and implications</p></div><div class="section-head-tools"><div class="chip-filters" id="research-filter"></div><button class="btn btn-primary btn-sm" data-act="add" data-reg="research"><svg class="icon"><use href="#i-plus"/></svg> New brief</button></div></div>
+        <div class="research-grid" id="research-grid"></div>
+
+        <div class="two-col">
+          <div class="card">
+            <div class="card-head"><div><h3>Technology radar</h3><p>Indicative positioning of Gen AI &amp; analytics themes</p></div></div>
+            <div class="radar-list" id="radar-list"></div>
+          </div>
+          <div class="card">
+            <div class="card-head"><div><h3>Research method</h3><p>From question to adopted position</p></div></div>
+            <ol class="step-list" id="research-steps"></ol>
+            <div class="threshold-note"><svg class="icon"><use href="#i-info"/></svg><span>Research outputs are maintained in the document registry with version, owner and review date so that team members can retrieve the current position quickly.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────────── 09 · DOCUMENTS ─────────── -->
+      <section class="view" id="view-documents" aria-label="Document Registry">
+        <div class="callout callout-brand"><span class="callout-icon"><svg class="icon"><use href="#i-archive"/></svg></span><div><strong>Electronic &amp; physical file discipline</strong><p>The position maintains and organises electronic and physical files, ensuring all documents are <strong>up-to-date, accurately recorded, and easily accessible</strong> for team members.</p></div></div>
+
+        <div class="stat-strip stat-strip-4">
+          <div><span>Registered records</span><strong id="docstat-total">—</strong></div>
+          <div><span>Updated this month</span><strong id="docstat-month">—</strong></div>
+          <div><span>Physical files tracked</span><strong id="docstat-physical">—</strong></div>
+          <div><span>Pending review</span><strong id="docstat-review">—</strong></div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><div><h3>Document &amp; file register</h3><p>Single index for electronic and physical records</p></div><span class="section-tag" id="doc-count">—</span></div>
+          <div class="toolbar">
+            <label class="search-field"><svg class="icon"><use href="#i-search"/></svg><input type="search" id="doc-search" placeholder="Search reference, title, owner..." aria-label="Search document registry"></label>
+            <div class="chip-filters" id="doc-filter"></div>
+            <div class="toolbar-actions"><button class="btn btn-ghost btn-sm" data-act="export" data-reg="docs"><svg class="icon"><use href="#i-download"/></svg> CSV</button><button class="btn btn-primary btn-sm" data-act="add" data-reg="docs"><svg class="icon"><use href="#i-plus"/></svg> Register document</button></div>
+          </div>
+          <div class="table-scroll"><table class="data-table sortable" id="doc-table">
+            <thead><tr><th data-sort="ref">Reference <svg class="icon"><use href="#i-chevron-down"/></svg></th><th data-sort="title">Document title</th><th data-sort="category">Category</th><th data-sort="format">Format</th><th data-sort="version">Ver.</th><th data-sort="owner">Owner</th><th data-sort="updated">Last updated</th><th data-sort="status">Status</th></tr></thead>
+            <tbody id="doc-tbody"></tbody></table></div>
+          <div class="table-foot"><span>Local demonstration workspace · records are editable in this browser</span><span id="doc-showing"></span></div>
+          <div class="reg-pager" id="doc-pager"></div>
+          <div class="reg-bulk" id="doc-bulk"></div>
+        </div>
+
+        <div class="two-col">
+          <div class="card">
+            <div class="card-head"><div><h3>Filing standard</h3><p>Naming, versioning and retention rules</p></div></div>
+            <div class="code-block"><div class="code-head"><span>Naming convention</span><button class="mini-btn" id="copy-naming"><svg class="icon"><use href="#i-copy"/></svg> Copy</button></div><pre id="naming-code">[PLATFORM]-[DOCTYPE]-[SUBJECT]-[VER]-[YYYYMMDD]
+CBaaS-SOP-Onboarding-v3.2-20261028.pdf
+SMTA-EVAL-SentimentAccuracy-v1.4-20261015.pdf
+GOV-MIN-AdoptionSteering-v1.0-20261103.docx</pre></div>
+            <ul class="tick-list" id="filing-rules"></ul>
+          </div>
+          <div class="card">
+            <div class="card-head"><div><h3>Physical file control</h3><p>Keeping paper and electronic records aligned</p></div></div>
+            <div class="physical-grid" id="physical-grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────────── 10 · OPERATIONS ─────────── -->
+      <section class="view" id="view-operations" aria-label="Support and Operations">
+        <div class="alert-banner">
+          <span class="alert-icon"><svg class="icon"><use href="#i-zap"/></svg></span>
+          <div><strong>After-hours support obligation</strong><p>When necessary, the CSSA is required to provide both <strong>technical and administrative support</strong> related to the projects after normal office hours for <strong>special events, fire-fighting and urgent deployment of services</strong>, etc.</p></div>
+          <span class="pill pill-amber">On-call enabled</span>
+        </div>
+
+        <div class="two-col two-col-60">
+          <div class="card">
+            <div class="card-head"><div><h3>Incident severity matrix</h3><p>Response and restoration targets by priority</p></div></div>
+            <div class="table-scroll"><table class="data-table"><thead><tr><th>Priority</th><th>Definition / examples</th><th>Acknowledge</th><th>Restore</th><th>Escalation</th></tr></thead><tbody id="severity-tbody"></tbody></table></div>
+          </div>
+          <div class="card">
+            <div class="card-head"><div><h3>On-call roster</h3><p>Illustrative after-hours coverage</p></div><span class="section-tag"><svg class="icon"><use href="#i-clock"/></svg> Weekly rotation</span></div>
+            <div class="roster" id="roster-list"></div>
+            <div class="threshold-note"><svg class="icon"><use href="#i-phone"/></svg><span>Escalation contacts and contractor hotlines are held in the controlled on-call sheet; this page shows the structure only.</span></div>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="card">
+            <div class="card-head"><div><h3>Fire-fighting playbook</h3><p>Sequence for urgent service restoration</p></div></div>
+            <ol class="step-list" id="incident-steps"></ol>
+          </div>
+          <div class="card">
+            <div class="card-head"><div><h3>Urgent deployment runbook</h3><p>Interactive pre-deployment checklist</p></div><span class="section-tag" id="runbook-progress">0 / 0</span></div>
+            <div class="runbook" id="runbook-list"></div>
+            <div class="runbook-bar"><i id="runbook-bar-fill" style="width:0%"></i></div>
+            <div class="runbook-foot"><button class="btn btn-ghost btn-sm" id="runbook-reset"><svg class="icon"><use href="#i-refresh"/></svg> Reset checklist</button><span>Progress saved locally</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><div><h3>Special events &amp; surge support</h3><p>Periods requiring enhanced technical and administrative cover</p></div></div>
+          <div class="events-grid" id="events-grid"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><div><h3>Escalation ladder</h3><p>Clear routing for after-hours decisions</p></div></div>
+          <div class="escalation" id="escalation-flow"></div>
+        </div>
+      </section>
+
+      <!-- ─────────── 11 · ASSESSMENT ─────────── -->
+      <section class="view" id="view-assessment" aria-label="Capability Assessment">
+        <div class="callout callout-brand"><span class="callout-icon"><svg class="icon"><use href="#i-clipboard"/></svg></span><div><strong>Interactive requirement mapping</strong><p>Use this worksheet to map evidence against the six requirement details and four mandatory skill thresholds. It runs entirely in your browser and stores progress locally — nothing is transmitted.</p></div></div>
+
+        <div class="two-col two-col-65">
+          <div class="stack-col">
+            <div class="card">
+              <div class="card-head"><div><h3>Requirement details</h3><p>Tick each item where demonstrable evidence exists</p></div><span class="section-tag" id="req-score">0 / 6</span></div>
+              <div class="assess-list" id="assess-req"></div>
+            </div>
+            <div class="card">
+              <div class="card-head"><div><h3>Mandatory skill thresholds</h3><p>Enter years of relevant experience (minimum 3 per area)</p></div><span class="section-tag" id="skill-score">0 / 4 met</span></div>
+              <div class="assess-skills" id="assess-skills"></div>
+            </div>
+          </div>
+          <div class="stack-col">
+            <div class="card score-card">
+              <div class="card-head"><div><h3>Readiness summary</h3><p>Live calculation</p></div></div>
+              <div class="score-ring-wrap"><div id="score-ring" class="score-ring"></div><div class="score-centre"><strong id="score-value">0%</strong><span>Overall match</span></div></div>
+              <div class="score-breakdown" id="score-breakdown"></div>
+              <div class="score-verdict" id="score-verdict">Start by marking the requirements you can evidence.</div>
+              <div class="score-actions">
+                <button class="btn btn-primary btn-block" id="btn-copy-summary"><svg class="icon"><use href="#i-copy"/></svg> Copy summary</button>
+                <button class="btn btn-ghost btn-block" id="btn-reset-assess"><svg class="icon"><use href="#i-refresh"/></svg> Reset worksheet</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-head"><div><h3>Evidence guide</h3><p>What typically substantiates each area</p></div></div>
+              <ul class="tick-list" id="evidence-list"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="local-note"><svg class="icon"><use href="#i-lock"/></svg> This worksheet uses browser local storage only. Clearing site data removes saved progress.</div>
+      </section>
+
+      <!-- ─────────── 15 · SECURITY FRAMEWORK (compiled DOCX) ─────────── -->
+      <section class="view" id="view-security" aria-label="Security Framework">
+        <div class="fw-docbar">
+          <div class="fw-docbar-mark"><svg class="icon"><use href="#i-shield"/></svg></div>
+          <div class="fw-docbar-main"><span class="fw-docbar-org">DIGITAL POLICY OFFICE · INFORMATION SECURITY</span><h2>IT Security Compliance &amp; Operational Support Framework</h2><p>for Centralised Artificial Intelligence and Data Analytics Platforms · CSSA Position (T26)</p></div>
+          <div class="fw-docbar-ref"><span>DOCUMENT REF</span><strong>DPO-CSSA-SEC-2026</strong><small>Version 1.0 · October 2026</small></div>
+        </div>
+
+        <div class="two-col two-col-60">
+          <div class="card">
+            <div class="card-head"><div><h3>Defence in depth · interactive 3D model</h3><p>Five control layers from S17 / G3 · drag to rotate, click a layer to inspect</p></div><div class="scene-tools"><button class="mini-btn" data-fw="scene" data-scene="defence" data-dir="-1">Rotate left</button><button class="mini-btn" data-fw="scene" data-scene="defence" data-dir="1">Rotate right</button><button class="mini-btn" data-fw="scene-reset" data-scene="defence">Reset</button></div></div>
+            <div id="scene-defence" class="scene3d"></div>
+            <div id="defence-detail" class="scene-detail"></div>
+            <div class="scene-foot"><span><svg class="icon"><use href="#i-info"/></svg> Axonometric projection · rendered locally with SVG, no external libraries</span><span id="defence-angle">Azimuth 35°</span></div>
+          </div>
+          <div class="stack-col">
+            <div class="card"><div class="card-head"><div><h3>Framework metadata</h3><p>From the compiled source document</p></div></div><div id="fw-meta" class="fw-def-list"></div></div>
+            <div class="card"><div class="card-head"><div><h3>Governing policies</h3><p>Mandatory baseline</p></div></div><div id="fw-policies" class="fw-policy-list"></div></div>
+          </div>
+        </div>
+
+        <div class="card"><div class="card-head"><div><h3>1 · Executive summary</h3><p>Key outcomes of the framework</p></div><span class="pill pill-blue">Section 1</span></div><div id="fw-exec" class="fw-exec"></div></div>
+        <div class="card"><div class="card-head"><div><h3>5 · Core security principles applied to AI platforms</h3><p>S17 Section 6 / G3 Section 6</p></div><span class="pill pill-teal">CIA + accountability</span></div><div id="fw-principles" class="fw-principles"></div></div>
+        <div class="two-col">
+          <div class="card"><div class="card-head"><div><h3>2 · Purpose and scope</h3><p>Platform activities covered</p></div></div><div id="fw-scope" class="fw-scope"></div></div>
+          <div class="card"><div class="card-head"><div><h3>Framework contents</h3><p>Navigate the compiled sections</p></div></div><div id="fw-toc" class="fw-toc"></div></div>
+        </div>
+      </section>
+
+      <!-- ─────────── 16 · SECURITY CONTROLS ─────────── -->
+      <section class="view" id="view-controls" aria-label="Security Controls">
+        <div class="app-band app-band-amber">
+          <div class="app-band-icon"><svg class="icon"><use href="#i-lock"/></svg></div>
+          <div><span class="app-band-tag">COMPILED FRAMEWORK · SECTION 7 · S17 / G3</span><h3>Key Security Control Domains for Platform Operations</h3><p>Seven mandatory and recommended control domains summarised from S17 and G3. The compliance register below is a working workspace extension — statuses, owners and evidence are editable and audited.</p></div>
+          <span class="status-pill"><span class="dot dot-green"></span> Register live</span>
+        </div>
+        <div class="stat-strip stat-strip-4">
+          <div><span>Control records</span><strong id="fw-ctl-total">—</strong></div>
+          <div><span>Compliant</span><strong id="fw-ctl-compliant">—</strong></div>
+          <div><span>In progress</span><strong id="fw-ctl-progress">—</strong></div>
+          <div><span>Review due</span><strong id="fw-ctl-review">—</strong></div>
+        </div>
+        <div class="two-col two-col-60">
+          <div class="card">
+            <div class="card-head"><div><h3>Control architecture · 3D domain model</h3><p>Drag to rotate · click a domain to filter the register</p></div><div class="scene-tools"><button class="mini-btn" data-fw="scene" data-scene="controls" data-dir="-1">Rotate left</button><button class="mini-btn" data-fw="scene" data-scene="controls" data-dir="1">Rotate right</button><button class="mini-btn" data-fw="scene-reset" data-scene="controls">Reset</button></div></div>
+            <div id="scene-controls" class="scene3d"></div>
+            <div id="control-legend" class="scene-detail"></div>
+          </div>
+          <div class="card"><div class="card-head"><div><h3>S17 / G3 areas referenced</h3><p>14 mandatory areas cited across the framework</p></div></div><div id="fw-areas" class="fw-areas"></div></div>
+        </div>
+        <div class="card"><div class="card-head"><div><h3>Seven control domains</h3><p>Expand a domain to read the controls from the source document</p></div><span class="section-tag">30 controls</span></div><div id="fw-domains" class="fw-accordion"></div></div>
+        <div class="card">
+          <div class="card-head"><div><h3>Control compliance register</h3><p>Editable · sorting, filtering, pagination, CSV and audit trail</p></div><div class="toolbar-actions"><button class="btn btn-ghost btn-sm" data-act="export" data-reg="controls"><svg class="icon"><use href="#i-download"/></svg> CSV</button><button class="btn btn-primary btn-sm" data-act="add" data-reg="controls"><svg class="icon"><use href="#i-plus"/></svg> Add control</button></div></div>
+          <div class="toolbar"><label class="search-field"><svg class="icon"><use href="#i-search"/></svg><input type="search" id="fw-controls-search" placeholder="Search control, domain, owner, evidence..." aria-label="Search control register"></label><div class="chip-filters" id="fw-controls-filter"></div></div>
+          <div class="table-scroll"><table class="data-table sortable" id="fw-controls-table"><tbody></tbody></table></div>
+          <div class="table-foot"><span>Workspace extension layered on the compiled framework</span><span id="fw-controls-showing"></span></div>
+          <div class="reg-pager" id="fw-controls-pager"></div><div class="reg-bulk" id="fw-controls-bulk"></div>
+        </div>
+      </section>
+
+      <!-- ─────────── 17 · RISK ASSESSMENT ─────────── -->
+      <section class="view" id="view-risk" aria-label="Risk Assessment">
+        <div class="app-band">
+          <div class="app-band-icon"><svg class="icon"><use href="#i-alert"/></svg></div>
+          <div><span class="app-band-tag">COMPILED FRAMEWORK · SECTION 6 · ISPG-SM01</span><h3>Security Risk Assessment Framework for AI Systems</h3><p>A risk-based approach is mandatory. The live risk register and 3D likelihood/impact surface are workspace implementations of the Annex B template in the source document.</p></div>
+          <span class="status-pill"><span class="dot dot-green"></span> SRAA active</span>
+        </div>
+        <div class="two-col two-col-60">
+          <div class="card">
+            <div class="card-head"><div><h3>3D risk surface</h3><p>Likelihood × impact · column height = number of risks · drag to rotate</p></div><div class="scene-tools"><button class="mini-btn" data-fw="scene" data-scene="risk" data-dir="-1">Rotate left</button><button class="mini-btn" data-fw="scene" data-scene="risk" data-dir="1">Rotate right</button><button class="mini-btn" data-fw="scene-reset" data-scene="risk">Reset</button></div></div>
+            <div id="scene-risk" class="scene3d"></div>
+            <div id="risk-heatmap-detail" class="scene-detail"></div>
+          </div>
+          <div class="stack-col">
+            <div class="card"><div class="card-head"><div><h3>Iterative SRAA cycle</h3><p>Adapted from ISPG-SM01 · Figure 2</p></div></div><div id="fw-cycle" class="fw-cycle"></div></div>
+            <div class="card"><div class="card-head"><div><h3>AI-specific risk considerations</h3><p>Section 6.3</p></div></div><div id="fw-airisks" class="fw-ticks"></div></div>
+          </div>
+        </div>
+        <div class="card"><div class="card-head"><div><h3>System-level risk assessment steps</h3><p>ISPG-SM01 Section 4.4</p></div></div><div id="fw-risksteps" class="fw-steps"></div></div>
+        <div class="card">
+          <div class="card-head"><div><h3>Risk register · Annex B template</h3><p>Editable risk levels are recomputed from likelihood and impact</p></div><div class="toolbar-actions"><button class="btn btn-ghost btn-sm" data-act="export" data-reg="risks"><svg class="icon"><use href="#i-download"/></svg> CSV</button><button class="btn btn-primary btn-sm" data-act="add" data-reg="risks"><svg class="icon"><use href="#i-plus"/></svg> Add risk</button></div></div>
+          <div class="toolbar"><label class="search-field"><svg class="icon"><use href="#i-search"/></svg><input type="search" id="fw-risks-search" placeholder="Search risk, threat, treatment..." aria-label="Search risk register"></label><div class="chip-filters" id="fw-risks-filter"></div></div>
+          <div class="table-scroll"><table class="data-table sortable" id="fw-risks-table"><tbody></tbody></table></div>
+          <div class="table-foot"><span>Seeded from Annex B of DPO-CSSA-SEC-2026</span><span id="fw-risks-showing"></span></div>
+          <div class="reg-pager" id="fw-risks-pager"></div><div class="reg-bulk" id="fw-risks-bulk"></div>
+        </div>
+        <div class="callout callout-brand"><span class="callout-icon"><svg class="icon"><use href="#i-info"/></svg></span><div><strong>Calibration &amp; residual risk acceptance</strong><p id="fw-risknote"></p></div></div>
+      </section>
+
+      <!-- ─────────── 18 · GOVERNANCE & RACI ─────────── -->
+      <section class="view" id="view-governance" aria-label="Governance and RACI">
+        <div class="app-band app-band-teal">
+          <div class="app-band-icon"><svg class="icon"><use href="#i-users"/></svg></div>
+          <div><span class="app-band-tag">COMPILED FRAMEWORK · SECTIONS 3, 4, 8 · ANNEX A</span><h3>Government IT Security Organisation &amp; Responsibility Matrix</h3><p>Central and departmental interfaces the CSSA must navigate, rendered as an interactive 3D organisation model, plus the Annex A RACI matrix.</p></div>
+          <span class="status-pill"><span class="dot dot-green"></span> Structure mapped</span>
+        </div>
+        <div class="two-col two-col-60">
+          <div class="card">
+            <div class="card-head"><div><h3>Security organisation · 3D structure</h3><p>Drag to rotate · click a tier to inspect roles and interfaces</p></div><div class="scene-tools"><button class="mini-btn" data-fw="scene" data-scene="org" data-dir="-1">Rotate left</button><button class="mini-btn" data-fw="scene" data-scene="org" data-dir="1">Rotate right</button><button class="mini-btn" data-fw="scene-reset" data-scene="org">Reset</button></div></div>
+            <div id="scene-org" class="scene3d"></div>
+            <div id="org-detail" class="scene-detail"></div>
+          </div>
+          <div class="stack-col">
+            <div class="card"><div class="card-head"><div><h3>Central framework · five key parties</h3><p>S17 Section 5 / G3 Section 5</p></div></div><div id="fw-central" class="fw-central"></div></div>
+            <div class="card"><div class="card-head"><div><h3>Departmental IT security organisation</h3><p>DPO context · S17 Section 5.2</p></div></div><div id="fw-dporoles" class="fw-roles"></div></div>
+          </div>
+        </div>
+        <div class="card"><div class="card-head"><div><h3>Annex A · Responsibility Matrix (RACI)</h3><p>R = Responsible · A = Accountable · C = Consulted · I = Informed</p></div></div><div id="fw-raci" class="table-scroll"></div></div>
+        <div class="two-col">
+          <div class="card"><div class="card-head"><div><h3>CSSA responsibilities mapped to security domains</h3><p>Section 3.2</p></div></div><div id="fw-responsibility" class="table-scroll"></div></div>
+          <div class="card"><div class="card-head"><div><h3>8 · Operational support &amp; coordination</h3><p>Multi-party information flow</p></div></div><div id="fw-operational" class="fw-operational"></div></div>
+        </div>
+      </section>
+
+      <!-- ─────────── 19 · ACTION PLAN & ASSURANCE ─────────── -->
+      <section class="view" id="view-actionplan" aria-label="Action Plan and Assurance">
+        <div class="app-band app-band-amber">
+          <div class="app-band-icon"><svg class="icon"><use href="#i-flag"/></svg></div>
+          <div><span class="app-band-tag">COMPILED FRAMEWORK · SECTIONS 9, 10, 11</span><h3>Action Plan, Compliance &amp; Continuous Improvement</h3><p>Prioritised actions for the engagement period (November 2026 – January 2027), with a tracking register, compliance obligations, audit cycle and the full reference list.</p></div>
+          <span class="status-pill"><span class="dot dot-amber"></span> 9 actions tracked</span>
+        </div>
+        <div class="stat-strip stat-strip-4">
+          <div><span>Planned actions</span><strong id="fw-act-total">—</strong></div>
+          <div><span>In progress</span><strong id="fw-act-progress">—</strong></div>
+          <div><span>Completed</span><strong id="fw-act-done">—</strong></div>
+          <div><span>Average progress</span><strong id="fw-act-avg">—</strong></div>
+        </div>
+        <div class="card">
+          <div class="card-head"><div><h3>10 · Prioritised action plan</h3><p>Editable tracker · status and progress are workspace extensions</p></div><div class="toolbar-actions"><button class="btn btn-ghost btn-sm" data-act="export" data-reg="actions"><svg class="icon"><use href="#i-download"/></svg> CSV</button><button class="btn btn-primary btn-sm" data-act="add" data-reg="actions"><svg class="icon"><use href="#i-plus"/></svg> Add action</button></div></div>
+          <div class="toolbar"><label class="search-field"><svg class="icon"><use href="#i-search"/></svg><input type="search" id="fw-actions-search" placeholder="Search action, target, reference..." aria-label="Search action plan"></label><div class="chip-filters" id="fw-actions-filter"></div></div>
+          <div class="table-scroll"><table class="data-table sortable" id="fw-actions-table"><tbody></tbody></table></div>
+          <div class="table-foot"><span>Source: Section 10 table · status/progress tracked locally</span><span id="fw-actions-showing"></span></div>
+          <div class="reg-pager" id="fw-actions-pager"></div><div class="reg-bulk" id="fw-actions-bulk"></div>
+        </div>
+        <div class="two-col">
+          <div class="card"><div class="card-head"><div><h3>9.1 · Compliance obligations</h3><p>Policies and legal requirements</p></div></div><div id="fw-compliance" class="fw-ticks"></div></div>
+          <div class="stack-col">
+            <div class="card"><div class="card-head"><div><h3>9.2 · Security reviews &amp; audits</h3><p>S17 Section 20.2 / ISPG-SM01</p></div></div><div id="fw-reviews" class="fw-ticks"></div></div>
+            <div class="card"><div class="card-head"><div><h3>9.3 · Continuous improvement</h3><p>Feeding observations back into the cycle</p></div></div><div id="fw-improve" class="fw-ticks"></div></div>
+          </div>
+        </div>
+        <div class="card"><div class="card-head"><div><h3>11 · References</h3><p>As listed in the compiled framework</p></div></div><div id="fw-references" class="fw-references"></div></div>
+        <div class="card"><div class="card-head"><div><h3>Document provenance</h3><p>Compilation note</p></div></div><div id="fw-provenance" class="fw-provenance"></div></div>
+      </section>
+
+      <!-- ─────────── 20 · PLATFORM DIGITAL TWIN (live 3D estate) ─────────── -->
+      <section class="view" id="view-twin" aria-label="Platform Digital Twin">
+        <div class="app-band">
+          <div class="app-band-icon"><svg class="icon"><use href="#i-cpu"/></svg></div>
+          <div><span class="app-band-tag">3D STUDIO · LIVE DIGITAL TWIN</span><h3>Centralised AI Platform Estate · 3D Digital Twin</h3>
+            <p>A live three-dimensional model of both centralised platforms, every production B/D tenant, open incidents and high-severity risks. Geometry, colours and node heights are recomputed from the workspace records — add a tenant, resolve a ticket or change a risk and the twin updates immediately.</p></div>
+          <span class="status-pill"><span class="dot dot-green"></span> Live data</span>
+        </div>
+        <div class="stat-strip stat-strip-4">
+          <div><span>Live B/D tenants</span><strong id="twin-live">—</strong></div>
+          <div><span>Open incidents</span><strong id="twin-incidents">—</strong></div>
+          <div><span>High risks</span><strong id="twin-risks">—</strong></div>
+          <div><span>Analysed text items</span><strong id="twin-corpus">—</strong></div>
+        </div>
+        <div class="two-col two-col-65">
+          <div class="card">
+            <div class="card-head"><div><h3>Estate model</h3><p>True orbit camera · drag horizontally to rotate, vertically to change elevation</p></div><div class="scene-tools"><button class="mini-btn" data-fw="studio" data-scene="twin" data-op="auto">Auto rotate</button><button class="mini-btn" data-fw="studio" data-scene="twin" data-op="expand">Expand</button></div></div>
+            <div id="scene-twin" class="scene3d twin-scene"></div>
+            <div id="twin-detail" class="scene-detail"></div>
+            <div class="scene-foot"><span><svg class="icon"><use href="#i-info"/></svg> Axonometric 3D · painter-sorted faces · rendered locally with SVG</span><span>Platform cores → tenant nodes → incident / risk markers</span></div>
+          </div>
+          <div class="stack-col">
+            <div class="card"><div class="card-head"><div><h3>Model layers</h3><p>Isolate parts of the estate</p></div></div><div id="twin-layers" class="twin-layers"></div></div>
+            <div class="card"><div class="card-head"><div><h3>Colour legend</h3><p>What each node represents</p></div></div><div id="twin-legend" class="twin-legend"></div></div>
+            <div class="card"><div class="card-head"><div><h3>Estate activity</h3><p>Latest audit trail entries</p></div></div><div id="twin-activity" class="twin-activity"></div></div>
+          </div>
+        </div>
+        <div class="card"><div class="card-head"><div><h3>Connected live records</h3><p>Production tenants and their support posture</p></div><span class="section-tag">Computed from the adoption &amp; service desk registers</span></div><div id="twin-records" class="table-scroll"></div></div>
+      </section>
+
+      <!-- ─────────── 21 · COMPILED ASSURANCE REPORT ─────────── -->
+      <section class="view" id="view-report" aria-label="Compiled Assurance Report">
+        <div class="card rp-actions no-print">
+          <div class="rp-toolbar">
+            <button class="btn btn-primary btn-sm" data-rp="regenerate"><svg class="icon"><use href="#i-refresh"/></svg> Regenerate report</button>
+            <button class="btn btn-ghost btn-sm" data-rp="print"><svg class="icon"><use href="#i-printer"/></svg> Print / Save as PDF</button>
+            <button class="btn btn-ghost btn-sm" data-rp="html"><svg class="icon"><use href="#i-download"/></svg> Export standalone HTML</button>
+            <button class="btn btn-ghost btn-sm" data-rp="copy"><svg class="icon"><use href="#i-copy"/></svg> Copy executive summary</button>
+            <span class="rp-generated" id="rp-generated">Generating…</span>
+          </div>
+        </div>
+        <div class="rp-stage"><div id="rp-content"></div></div>
+      </section>
+
+      <footer class="footer">
+        <div><strong>T26 · Centralised AI &amp; Data Analytics Platform Operations</strong><p>Working demonstration workspace built from the published T26 position specification. Operational records are editable and stored locally in this browser; figures and registers are sample data, not official Government information.</p></div>
+        <div class="footer-right"><span>Workspace v2.0</span><span aria-hidden="true">·</span><a href="#overview">Back to top</a></div>
+      </footer>
+    </main>
+  </div>
+</div>
+
+<!-- ══════════════════ COMMAND PALETTE ══════════════════ -->
+<div class="cmd-overlay" id="cmd-overlay" aria-hidden="true">
+  <div class="cmd-modal" role="dialog" aria-modal="true" aria-label="Search workspace">
+    <div class="cmd-input-wrap"><svg class="icon"><use href="#i-search"/></svg><input type="text" id="cmd-input" placeholder="Search sections, documents, platforms..." autocomplete="off"><kbd>ESC</kbd></div>
+    <div class="cmd-results" id="cmd-results"></div>
+    <div class="cmd-foot"><span><kbd>↑</kbd><kbd>↓</kbd> to navigate</span><span><kbd>↵</kbd> to open</span><span id="cmd-count">Workspace indexed</span></div>
+  </div>
+</div>
+
+<div class="toast-stack" id="toast-stack" aria-live="polite"></div>
+<noscript><div class="noscript">This workspace requires JavaScript for navigation, charts and interactive registers. All written content remains readable in the page source.</div></noscript>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/platform-data.js"></script>
+<script src="assets/js/framework-data.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/framework.js"></script>
+<script src="assets/js/studio.js"></script>
+<script src="assets/js/report.js"></script>
+</body>
+</html>
